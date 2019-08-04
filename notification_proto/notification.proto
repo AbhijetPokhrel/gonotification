@@ -1,0 +1,30 @@
+
+
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "notification_proto";
+option java_outer_classname = "NotificationProto";
+
+package result;
+
+// The Notification service definition.
+service Notification {
+  // ConnectToServer connects to server with the ClientDetail message
+  // this will in response receive stream of NotificationMessage
+  rpc ConnectToServer(ClientDetail) returns (stream NotificationMessage) {}
+}
+
+
+// ClientDetail message
+message ClientDetail {
+  string Name = 1;
+  int32 Age = 2;
+  string address = 3;
+}
+
+// NotificationMessage is the message sent as notification from the server to the client
+message NotificationMessage{
+  string message = 1;
+  int64 time = 2; 
+}
