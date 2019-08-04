@@ -32,4 +32,4 @@ make run-client
 ```
 
 ## Working
-Once the server and clients are connected type some message in server console and press enter the message should pop up on client console. You can connect as many clinet as you want to the same server. The notification goes to all of them.
+Once the server and clients are connected type some message in server console and press enter the message should pop up on client console. You can connect as many client as you want to the same server. The notification goes to all of them.
